@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ingresar nuevo Rol</title>
+</head>
+    <body>
+
+        <section class="form_wrap">
+    
+            <section class="cantact_info">
+                <section class="info_title">
+                    <span class="fa fa-user-circle"></span>
+                    
+                </section>
+                <section class="info_items">
+                    <p><span class="fa fa-envelope"></span></p>
+                    <p><span class="fa fa-mobile"></span></p>
+                </section>
+            </section>
+    
+            <form action="" class="form_contact">
+                <h2>ROL</h2>
+                <div class="user_info">
+                    <label for="names">Id Rol *</label>
+                    <input type="text" id="names">
+    
+                    <label for="nombre-rol">Nombre Rol</label>
+                    <input type="names" id="nombre-rol" class="form-control" placeholder="Ingrese el nombre del Rol">
+    
+                    
+                    <input type="button" value="Agregar Rol" id="btnSend">
+                    <input type="button" value="Cancelar" id="btnSend" style="background-color: crimson;">
+                    
+                </div>
+                <!-- Botón para abrir el modal -->
+    <button id="openModalBtn">Agregar Permiso</button>
+
+    <!-- El Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar Permiso</h2>
+            <form id="permissionsForm">
+                <label for="roleName">Nombre del Rol:</label>
+                <input type="text" id="roleName" name="roleName" required><br><br>
+                
+                <label for="roleStatus">Estado:</label>
+                <select id="roleStatus" name="roleStatus">
+                    <option value="active">Activo</option>
+                    <option value="inactive">Inactivo</option>
+                </select><br><br>
+
+                <h3>Seleccionar Permisos:</h3>
+                <input type="checkbox" id="perm1" name="permissions" value="read">
+                <label for="perm1">Leer</label><br>
+                <input type="checkbox" id="perm2" name="permissions" value="write">
+                <label for="perm2">Escribir</label><br>
+                <input type="checkbox" id="perm3" name="permissions" value="execute">
+                <label for="perm3">Ejecutar</label><br><br>
+                <input type="checkbox" id="perm3" name="permissions" value="execute">
+                <label for="perm3">Ejecutar</label><br><br>
+                
+                <button type="submit">Guardar Permisos</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
+
+        // Obtener el botón que abre el modal
+        var btn = document.getElementById("openModalBtn");
+
+        // Obtener el elemento <span> que cierra el modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario hace clic en el botón, abre el modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Cuando el usuario hace clic en <span> (x), cierra el modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario hace clic fuera del modal, cierra el modal
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+            </form>
+            </section>
+            
+
+        <script src="js/formulario.js"></script>
+        
+    </body>
+
+</html>
+<script>
+    document.getElementById('redirectButton').addEventListener('click', function() {
+        href="../modalPermiso"; // URL de destino
+    });
+</script>
