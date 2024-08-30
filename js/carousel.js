@@ -90,7 +90,7 @@ function onMouseMove(event)
 {
     mouseX = -(-(window.innerWidth * .5) + event.pageX) * .0025;
     mouseY = -(-(window.innerHeight * .5) + event.pageY ) * .01;
-    mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 200);
+    mouseZ = -(radius) - (Math.abs(-(window.innerHeight * .5) + event.pageY ) - 50);
 }
 
 // loops and sets the carousel 3d properties
