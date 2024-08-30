@@ -1,80 +1,242 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>NailsSoft</title>
+    <title>NailsSoft</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.scss">
+    <style>
+      /* Estilo adicional para la tabla y los botones */
+      .table-container {
+        margin-top: 20px;
+      }
+      .actions-btn {
+        display: flex;
+        gap: 10px;
+      }
+      .actions-btn button {
+        padding: 5px 10px;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
-		
-		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar">
-				<div class="custom-menu">
-					<button type="button" id="sidebarCollapse" class="btn btn-primary">
-	        </button>
+    
+    <div class="wrapper d-flex align-items-stretch">
+      <nav id="sidebar">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
         </div>
-	  		<div class="img bg-wrap text-center py-4" style="background-image: url(images/fondobkg.jpg);">
-	  			<div class="user-logo">
-	  				<a href="index.html"><div class="img" style="background-image: url(images/logo1.png);"></div></a>
-	  				<h3>Compras</h3>
-	  			</div>
-	  		</div>
+        <div class="img bg-wrap text-center py-4" style="background-image: url(images/fondobkg.jpg);">
+          <div class="user-logo">
+            <a href="index.html"><div class="img" style="background-image: url(images/logo1.png);"></div></a>
+            <h3>Compras</h3>
+          </div>
+        </div>
         <ul class="list-unstyled components mb-5">
-            <li class="active">
-                <a href="dashboard.html"><span class="fa fa-dashboard mr-3"></span> Dashboard</a>
-              </li>
-              <li class="active">
-                <a href="roles.html"><span class="fa fa-cog mr-3"></span> Roles</a>
-              </li>
-              <li class="active">
-                <a href="usuario.html"><span class="fa fa-user mr-3"></span> Usuarios</a>
-              </li>
-              <li class="active">
-                <a href="insumo.html"><span class="fa fa-circle mr-3"></span> Insumo</a>
-              </li>
-              <li class="active">
-                <a href="proveedores.html"><span class="fa fa-users mr-3"></span> Proveedores</a>
-              </li>
-              <li class="active">
-                <a href="servicios.html"><span class="fa fa-hand-paper-o mr-3"></span> Servicios</a>
-              </li>
-              <li class="active">
-                <a href="empleados.html"><span class="fa fa-briefcase mr-3"></span> Empleados</a>
-              </li>
-              <li class="active">
-                <a href="clientes.html"><span class="fa fa-users mr-3"></span> Clientes</a>
-              </li>
-              <li class="active">
-                <a href="citas.html"><span class="fa fa-calendar mr-3"></span> Citas</a>
-              </li>
-              <li class="active">
-                <a href="venta.html"><span class="fa fa-dollar mr-3"></span> Venta Servicios / Productos</a>
-              </li>
-              <li class="active">
-                <a href="bajaproducto.html"><span class="fa fa-arrow-down mr-3"></span> Baja Productos</a>
-              </li>
+          <li class="active">
+            <a href="dashboard.html"><span class="fa fa-dashboard mr-3"></span> Dashboard</a>
+          </li>
+          <li class="active">
+            <a href="usuario.html"><span class="fa fa-user mr-3"></span> Usuarios</a>
+          </li>
+          <li class="active">
+            <a href="insumo.html"><span class="fa fa-circle mr-3"></span> Insumo</a>
+          </li>
+          <li class="active">
+            <a href="proveedores.html"><span class="fa fa-users mr-3"></span> Proveedores</a>
+          </li>
+          <li class="active">
+            <a href="servicios.html"><span class="fa fa-hand-paper-o mr-3"></span> Servicios</a>
+          </li>
+          <li class="active">
+            <a href="empleados.html"><span class="fa fa-briefcase mr-3"></span> Empleados</a>
+          </li>
+          <li class="active">
+            <a href="clientes.html"><span class="fa fa-users mr-3"></span> Clientes</a>
+          </li>
+          <li class="active">
+            <a href="citas.html"><span class="fa fa-calendar mr-3"></span> Citas</a>
+          </li>
+          <li class="active">
+            <a href="venta.html"><span class="fa fa-dollar mr-3"></span> Venta Servicios / Productos</a>
+          </li>
+          <li class="active">
+            <a href="bajaproducto.html"><span class="fa fa-arrow-down mr-3"></span> Baja Productos</a>
+          </li>
         </ul>
+      </nav>
 
-    	</nav>
-
-        <!-- Page Content  -->
+      <!-- Page Content -->
       <div id="content" class="p-4 p-md-5 pt-5">
-        <h2 class="mb-4"> <span>Bienvenidos a NailsSoft ¡ Agenda tu cita ahora mismo !</span></h2>
-        <p>NailsSoft es tu refugio para un cuidado exquisito de manos y pies. En nuestro spa, combinamos técnicas de manicura y pedicura de última generación con productos de alta calidad para ofrecerte una experiencia de belleza y relajación sin igual. Disfruta de un ambiente tranquilo y profesional mientras transformamos tus uñas con el toque suave y elegante que mereces. En NailsSoft, tu bienestar y estilo son nuestra prioridad.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="mb-4"><span>Gestión de compras</span></h2>
+
+        <!-- Botones y funcionalidades adicionales -->
+        <div class="d-flex justify-content-between mb-3">
+          <!-- Botón para agregar nueva compra -->
+          <button id="openModalBtn" class="buttonModal">Agregar compra</button>
+
+          <!-- Buscador -->
+          <input type="text" id="searchInput" class="form-control" placeholder="Buscar en la tabla" style="border: 1px;">
+        </div>
+
+        <!-- El Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Agregar compra</h2>
+            <form id="providerForm">
+              <label for="providerName">Proveedor:</label>
+              <input type="text" id="providerName" name="providerName" required><br><br>
+              
+              <label for="contact">Recibo:</label>
+              <input type="text" id="contact" name="contact" required><br><br>
+              
+              <label for="contactNumber">Fecha de compra:</label>
+              <input type="text" id="contactNumber" name="contactNumber" required><br><br>
+              
+              <label for="supplies">Fecha de registro:</label>
+              <input type="text" id="supplies" name="supplies" required><br><br>
+
+              <label for="supplies">Monto:</label>
+              <input type="text" id="supplies" name="supplies" required><br><br>
+              
+              <button type="submit">Guardar compra</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Tabla de compras -->
+        <div class="table-container">
+          <table class="table table-striped table-bordered" id="providersTable">
+            <thead class="thead-dark">
+              <tr>
+                <th>Nombre del proveedor</th>
+                <th>Recibo</th>
+                <th>Fecha de compra</th>
+                <th>Fecha de registro</th>
+                <th>Monto</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí se agregarán dinámicamente las filas de la tabla -->
+            </tbody>
+          </table>
+        </div>
       </div>
       
-		</div>
-    <div id="footer" ></div>
+    </div>
+    <div id="footer"></div>
     <script src="js/includeFooter.js"></script>
+
+    <!-- Scripts para las funcionalidades -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/includeFooter.js"></script>
+    <script>
+      // Simulación de datos iniciales (puedes reemplazarlos con datos reales de tu base de datos)
+      let purchases = [
+        { name: 'DistriNails', receipt: '12345', purchaseDate: '2024-08-26', registrationDate: '2024-08-27', amount: '$500', status: 'Efectiva' },
+      ];
+
+      // Función para renderizar la tabla de compras
+      function renderTable() {
+        const tbody = document.querySelector('#providersTable tbody');
+        tbody.innerHTML = '';
+        purchases.forEach((purchase) => {
+          const row = `
+            <tr>
+              <td>${purchase.name}</td>
+              <td>${purchase.receipt}</td>
+              <td>${purchase.purchaseDate}</td>
+              <td>${purchase.registrationDate}</td>
+              <td>${purchase.amount}</td>
+              <td>
+                <select class="status-select">
+                  <option value="Efectiva" ${purchase.status === 'Efectiva' ? 'selected' : ''}>Efectiva</option>
+                  <option value="Anulada" ${purchase.status === 'Anulada' ? 'selected' : ''}>Anulada</option>
+                </select>
+              </td>
+              <td class="actions-btn">
+                <button class="btn btn-warning btn-sm edit-btn"><i class="fa fa-pencil"></i></button>
+                <button class="btn btn-danger btn-sm delete-btn"><i class="fa fa-trash"></i></button>
+              </td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        });
+      }
+
+      // Captura el formulario y agrega una nueva compra
+      document.getElementById('providerForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Obtén los valores del formulario
+        const providerName = document.getElementById('providerName').value;
+        const receipt = document.getElementById('contact').value;
+        const purchaseDate = document.getElementById('contactNumber').value;
+        const registrationDate = document.getElementById('supplies').value;
+        const amount = document.getElementById('supplies').value;
+
+        // Agrega la nueva compra a la lista
+        purchases.push({
+          name: providerName,
+          receipt: receipt,
+          purchaseDate: purchaseDate,
+          registrationDate: registrationDate,
+          amount: amount,
+          status: 'Efectiva' // Estado por defecto
+        });
+
+        // Renderiza nuevamente la tabla con los nuevos datos
+        renderTable();
+
+        // Cierra el modal después de guardar
+        document.getElementById('myModal').style.display = 'none';
+      });
+
+      // Funcionalidad para abrir y cerrar el modal
+      const modal = document.getElementById('myModal');
+      const openModalBtn = document.getElementById('openModalBtn');
+      const closeModalBtn = document.querySelector('.close');
+
+      openModalBtn.addEventListener('click', function() {
+        modal.style.display = 'block';
+      });
+
+      closeModalBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+
+      // Llamada inicial para renderizar la tabla
+      renderTable();
+
+      // Buscador de la tabla
+      document.getElementById('searchInput').addEventListener('keyup', function() {
+        const searchText = this.value.toLowerCase();
+        const rows = document.querySelectorAll('#providersTable tbody tr');
+
+        rows.forEach(row => {
+          const rowData = row.textContent.toLowerCase();
+          row.style.display = rowData.includes(searchText) ? '' : 'none';
+        });
+      });
+    </script>
   </body>
 </html>
