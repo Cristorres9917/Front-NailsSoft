@@ -57,7 +57,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  /* background-color: #fff;*/ } 
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -8137,7 +8137,7 @@ body {
   font-size: 14px;
   line-height: 1.8;
   font-weight: normal;
-  background: #fff;
+  /* background: #fff; */
   color: gray; }
 
 a {
@@ -8396,7 +8396,7 @@ a[data-toggle="collapse"] {
 }
 
 body{
-    background: #DBDBDB;
+    /* background: #DBDBDB; */
     font-family: 'Open sans';
 }
 
@@ -8679,7 +8679,7 @@ form.form_contact input[type="button"]:hover{
    color: rgba(255, 255, 255, 1);
    margin: 0;
    padding: 0;
-   background: #4A4A4A;
+   /* background: #4A4A4A; */
    -webkit-touch-callout: none;
    -webkit-user-select: none;
    -khtml-user-select: none;
@@ -9065,7 +9065,7 @@ body,
   
 
 /* Estilos Carousel */
-html, body{ background-color:#c3c2bd;}	
+html, body{background-image: linear-gradient(283deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 30%,rgba(255,255,255, 0.04) 30%, rgba(255,255,255, 0.04) 49%,rgba(31, 31, 31,0.04) 49%, rgba(31, 31, 31,0.04) 100%),linear-gradient(297deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 20%,rgba(255,255,255, 0.04) 20%, rgba(255,255,255, 0.04) 60%,rgba(31, 31, 31,0.04) 60%, rgba(31, 31, 31,0.04) 100%),linear-gradient(242deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 29%,rgba(255,255,255, 0.04) 29%, rgba(255,255,255, 0.04) 48%,rgba(31, 31, 31,0.04) 48%, rgba(31, 31, 31,0.04) 100%),linear-gradient(90deg, rgba(0,0,0, 0),rgba(0,0,0, 0));}	
 
 body
 { 
@@ -9343,3 +9343,13 @@ body {
 	}
   }
   
+  
+
+
+/* Estilo tablas */
+.table-container table {
+  border-radius: 10px;
+  overflow:hidden; /* Esto asegura que el contenido se ajuste al borde redondeado */
+  border-collapse:collapse; /* Necesario para que el border-radius funcione correctamente */
+  border-spacing: 0; /* Elimina el espacio entre las celdas */
+}
