@@ -5,13 +5,38 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.scss">
+    <!-- Font Awesome and Google Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
   </head>
   <body>
-		
+    <header class="header">
+      <div class="container-fluid">
+        <nav class="navbar1 navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">
+            <span class="brand-name">NailsSoft</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <span class="material-icons-outlined">notifications</span>
+              <span class="material-icons-outlined">email</span>
+              <span class="material-icons-outlined">account_circle</span>
+              <button class="material-icons-outlined" id="deleteButton">logout</button>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>	
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">
@@ -66,23 +91,23 @@
       
       <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
-        <h2>Servicios & productos disponibles</h2>
+        <h3>Descubre la perfección en cada diseño.</h2>
         <button id="redirectButton">Agenda tu cita ahora mismo</button>
         <div id="contentContainer" class="trans3d"> 
           
           <section id="carouselContainer" class="trans3d">
-            <figure id="item1" class="carouselItem trans3d">Manicura<div class="carouselItemInner trans3d"><img src="images/img1.jpg" alt="Imagen" class="imgp1"></div></figure>
-            <figure id="item2" class="carouselItem trans3d">Manicura<div class="carouselItemInner trans3d"><img src="images/img2.jpg" alt="Imagen2" class="imgp1"></div></figure>
-            <figure id="item3" class="carouselItem trans3d">Manicura<div class="carouselItemInner trans3d"><img src="images/img3.jpg" alt="Imagen3" class="imgp1"></div></figure>
-            <figure id="item4" class="carouselItem trans3d">Pedicura<div class="carouselItemInner trans3d"><img src="images/img4.jpg" alt="Imagen4" class="imgp1"></div></figure>
-            <figure id="item5" class="carouselItem trans3d">Pedicura<div class="carouselItemInner trans3d"><img src="images/img5.jpg" alt="Imagen5" class="imgp1"></div></figure>
-            <figure id="item6" class="carouselItem trans3d">Pedicura<div class="carouselItemInner trans3d"><img src="images/img6.jpg" alt="Imagen6" class="imgp1"></div></figure>
-            <figure id="item7" class="carouselItem trans3d">Pedicura<div class="carouselItemInner trans3d"><img src="images/img7.jpg" alt="Imagen7" class="imgp1"></div></figure>
-            <figure id="item8" class="carouselItem trans3d">Cepillo de uñas<div class="carouselItemInner trans3d"><img src="images/Cepillo de uñas.jpeg" alt="Imagen8" class="imgp1"></div></figure>
-            <figure id="item9" class="carouselItem trans3d">Corta uñas<div class="carouselItemInner trans3d"><img src="images/CortaUñas.jpeg" alt="Imagen9" class="imgp1"></div></figure>
-            <figure id="item10" class="carouselItem trans3d">Esmalte<div class="carouselItemInner trans3d"><img src="images/esmalte.jpeg" alt="Imagen10" class="imgp1"></div></figure>
-            <figure id="item11" class="carouselItem trans3d">Limas<div class="carouselItemInner trans3d"><img src="images/Limas.jpeg" alt="Imagen11" class="imgp1"></div></figure>
-            <figure id="item12" class="carouselItem trans3d">Esmaltes<div class="carouselItemInner trans3d"><img src="images/esmalte.jpeg" alt="Imagen12" class="imgp1"></div></figure>
+            <figure id="item1" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img1.jpg" alt="Imagen" class="imgp1"><h3>Manicura</h3></div></figure>
+            <figure id="item2" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img2.jpg" alt="Imagen2" class="imgp1"><h3>Manicura</h3></div></figure>
+            <figure id="item3" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img3.jpg" alt="Imagen3" class="imgp1"><h3>Manicura</h3></div></figure>
+            <figure id="item4" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img4.jpg" alt="Imagen4" class="imgp1"><h3>Pedicura</h3></div></figure>
+            <figure id="item5" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img5.jpg" alt="Imagen5" class="imgp1"><h3>Pedicura</h3></div></figure>
+            <figure id="item6" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img6.jpg" alt="Imagen6" class="imgp1"><h3>Pedicura</h3></div></figure>
+            <figure id="item7" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/img7.jpg" alt="Imagen7" class="imgp1"><h3>Pedicura</h3></div></figure>
+            <figure id="item8" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/Cepillo de uñas.jpeg" alt="Imagen8" class="imgp1"><h3>Cepillo de uñas</h3></div></figure>
+            <figure id="item9" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/CortaUñas.jpeg" alt="Imagen9" class="imgp1"><h3>Corta uñas</h3></div></figure>
+            <figure id="item10" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/esmalte.jpeg" alt="Imagen10" class="imgp1"><h3>Esmalte</h3></div></figure>
+            <figure id="item11" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/Limas.jpeg" alt="Imagen11" class="imgp1"><h3>Limas</h3></div></figure>
+            <figure id="item12" class="carouselItem trans3d"><div class="carouselItemInner trans3d"><img src="images/esmalte.jpeg" alt="Imagen12" class="imgp1"><h3>Esmaltes</h3></div></figure>
           </section>
           </div>
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -102,6 +127,8 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/alerta.js"></script>
     <script>
       document.getElementById('redirectButton').addEventListener('click', function() {
       href="../citas"; // URL de destino

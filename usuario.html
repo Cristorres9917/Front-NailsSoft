@@ -5,13 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.scss">
+    <!-- Font Awesome and Google Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-		
+		<header class="header">
+      <div class="container-fluid">
+        <nav class="navbar1 navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="index.html">
+            <span class="brand-name">NailsSoft</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <span class="material-icons-outlined">notifications</span>
+              <span class="material-icons-outlined">email</span>
+              <span class="material-icons-outlined">account_circle</span>
+              <button class="material-icons-outlined" id="deleteButton">logout</button>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>	
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="custom-menu">
@@ -152,6 +175,8 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/formulario.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/alerta.js"></script>
 
 <script>
 // Simulación de datos iniciales

@@ -1,9 +1,9 @@
 // set and cache variables
 var w, container, carousel, item, radius, itemLength, rY, ticker, fps; 
-var mouseX = 0;
-var mouseY = 0;
-var mouseZ = 0;
-var addX = 0;
+var mouseX = 0.5;
+var mouseY = 0.5;
+var mouseZ = -(radius);
+var addX = 0.5;
 
 
 // fps counter created by: https://gist.github.com/sharkbrainguy/1156092,
@@ -65,7 +65,7 @@ TweenMax.set($item, {rotationY:rY * i, z:radius, transformOrigin:"50% 50% " + -r
     
     // set mouse x and y props and looper ticker
     window.addEventListener( "mousemove", onMouseMove, false );
-    ticker = setInterval( looper, 1000/60 );			
+    ticker = setInterval( looper, 1500/60 );			
 }
 
 function animateIn( $item, $block )
@@ -84,6 +84,7 @@ function animateIn( $item, $block )
     TweenMax.set( $block, { z:$nz, rotationY:$nrY, rotationX:$nrX, x:$nx, y:$ny, autoAlpha:0} )
     TweenMax.to( $block, $s, { delay:$d, rotationY:0, rotationX:0, z:0,  ease:Expo.easeInOut} )
     TweenMax.to( $block, $s-.5, { delay:$d, x:0, y:0, autoAlpha:1, ease:Expo.easeInOut} )
+    
 }
 
 function onMouseMove(event)

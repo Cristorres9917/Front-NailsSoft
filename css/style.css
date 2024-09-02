@@ -4,6 +4,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ 
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8177,14 +8179,41 @@ h1, h2, h3, h4, h5,
   width: 100%; }
 
 #sidebar {
+  margin-top: 60px;
   min-width: 300px;
   max-width: 300px;
-  background: #EBE5DD;  /*Aqui cambie el background*/
+  background: pink;  /*Aqui cambie el background*/
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-  position: relative; }
+  position:relative;
+  }
+
+  #sidebar .components {
+    height: calc(100vh - 150px); /* Ajusta este valor según el contenido y el diseño */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    padding-right: 20px; /* Espacio para evitar el contenido pegado al borde */
+}
+
+/* Opcional: Oculta las barras de desplazamiento en Webkit (Chrome, Safari) */
+#sidebar .components::-webkit-scrollbar {
+    width: 0px; /* Oculta la barra de desplazamiento horizontal */
+    background: transparent; /* Mantiene el fondo transparente */
+}
+
+/* Opcional: Oculta las barras de desplazamiento en Firefox */
+#sidebar .components {
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+}
+
+/* Opcional: Ajusta el fondo de las secciones para que no se solapen con el scrollbar */
+#sidebar .components {
+    padding-right: 15px; /* Añade un relleno para evitar el contenido tapado */
+}
+
+  
+
   #sidebar .h6 {
     color: black; }
   #sidebar.active {
@@ -8200,21 +8229,23 @@ h1, h2, h3, h4, h5,
   #sidebar h1 {
     margin-bottom: 20px;
     font-weight: 700;
-    font-size: 20px; }
+    font-size: 200px; }
     #sidebar h1 .logo {
       color: black;
       display: block;
       padding: 10px 30px;
       background: #2f89fc; }
-  #sidebar ul.components {
+  #sidebar ul.components { 
     padding: 0; }
-  #sidebar ul li {
+  #sidebar ul li { 
     font-size: 16px; }
     #sidebar ul li > ul {
+      
       margin-left: 10px; }
       #sidebar ul li > ul li {
         font-size: 14px; }
     #sidebar ul li a {
+      border-radius: 10px; 
       padding: 15px 30px;
       display: block;
       color: black;
@@ -8634,11 +8665,12 @@ form.form_contact input[type="button"]:hover{
         }
 
         .modal-content {
-            background-color: #EBE5DD;
+          text-align: left;
+            background-color: pink;
             margin: 5% auto;
             padding: 20px;
             border-radius: 12px solid #888;
-            width: 75%; /* Puedes ajustar el ancho según tus necesidades */
+            width: 25%; /* Puedes ajustar el ancho según tus necesidades */
             font-family:cursive;
             font-size: medium;
         }
@@ -9065,7 +9097,10 @@ body,
   
 
 /* Estilos Carousel */
-html, body{background-image: linear-gradient(283deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 30%,rgba(255,255,255, 0.04) 30%, rgba(255,255,255, 0.04) 49%,rgba(31, 31, 31,0.04) 49%, rgba(31, 31, 31,0.04) 100%),linear-gradient(297deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 20%,rgba(255,255,255, 0.04) 20%, rgba(255,255,255, 0.04) 60%,rgba(31, 31, 31,0.04) 60%, rgba(31, 31, 31,0.04) 100%),linear-gradient(242deg, rgba(238,15,180, 0.04) 0%, rgba(238,15,180, 0.04) 29%,rgba(255,255,255, 0.04) 29%, rgba(255,255,255, 0.04) 48%,rgba(31, 31, 31,0.04) 48%, rgba(31, 31, 31,0.04) 100%),linear-gradient(90deg, rgba(0,0,0, 0),rgba(0,0,0, 0));}	
+html, body {
+  background-image: linear-gradient(283deg, rgba(238,15,180, 0.1) 30%, rgba(31, 31, 31,0.1) 70%);
+}
+
 
 body
 { 
@@ -9100,14 +9135,17 @@ h1{
 	font-size:56px;
 	letter-spacing:-2.5px;
 	margin-left:30px;
+
 }
 
 h3{
-	
-	font-size:16px;
+	font-family: 'Sevillana', cursive;
+  font-style: italic;
+	font-size:3rem;
 	letter-spacing:-1.5px;
 	margin-top:5px;
 	margin-left:35px;
+  text-align: center;
 }
 
 #fps
@@ -9238,6 +9276,7 @@ a:hover
   h3 {
     font-size: 0.75rem;
     margin-left: 1rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
   }
 
   .carouselItemInner {
@@ -9248,7 +9287,7 @@ a:hover
 /* Footer stilo */
 
 body {
-	display:grid;
+	display:block;
 	grid-template-rows: 1fr 10rem auto;
 	grid-template-areas:"main" "." "footer";
 	overflow-x:hidden;
@@ -9257,12 +9296,12 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	.footer {
 		z-index: 1;
-		--footer-background:#EBE5DD;
+		--footer-background:pink;
 		display:flex;
 		position: absolute;
 		grid-area: footer;
     width: 100%;
-		min-height:12rem;
+		min-height:10rem;
 		.bubbles {
 			position: absolute;
 			top:0;
@@ -9292,6 +9331,7 @@ body {
 			a, p {
 				color:black;
 				text-decoration:none;
+        font-size: 20px;
 			}
 			b {
 				color:black;
@@ -9313,8 +9353,8 @@ body {
 				}
 				.image {
 					align-self: center;
-					width:4rem;
-					height:4rem;
+					width:5rem;
+					height:6rem;
 					margin:0.25rem 0;
 					background-size: cover;
 					background-position: center;
@@ -9352,4 +9392,70 @@ body {
   overflow:hidden; /* Esto asegura que el contenido se ajuste al borde redondeado */
   border-collapse:collapse; /* Necesario para que el border-radius funcione correctamente */
   border-spacing: 0; /* Elimina el espacio entre las celdas */
+}
+
+
+
+
+/* Estilo header */
+
+/* Header (Navbar) */
+.header {
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  background-color: #EBE5DD;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar1   {
+  padding: 0.8rem 1rem;
+  background-color: #EBE5DD;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 65px;
+  color: black;
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+  
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2f89fc;
+}
+
+.navbar-toggler {
+  border-color: #EBE5DD;
+}
+
+/* Ajustes Responsivos */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    text-align: center;
+    
+  }
+
+  .navbar-nav .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+.material-icons-outlined{
+  vertical-align: middle;
+  line-height: 1px;
+  font-size: 30px;
+  border:none;
 }
