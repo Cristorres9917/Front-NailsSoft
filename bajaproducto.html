@@ -12,25 +12,14 @@
     <!-- Font Awesome and Google Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-      .table-container {
-        margin-top: 20px;
-      }
-      .actions-btn {
-        display: flex;
-        gap: 10px;
-      }
-      .actions-btn button {
-        padding: 5px 10px;
-        font-size: 14px;
-      }
-    </style>
+    
   </head>
   <body>
     <header class="header">
       <div class="container-fluid">
-        <nav class="navbar1 navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="index.html">
             <span class="brand-name">NailsSoft</span>
           </a>
@@ -129,34 +118,7 @@
     <script src="js/includeFooter.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/alerta.js"></script>
-    <script>
-      // Simulación de datos iniciales (puedes reemplazarlos con datos reales de tu base de datos)
-      let productDrops = [
-        { product: 'Esmalte Rojo', dropDate: '2024-08-01', dropQuantity: 10, observations: 'Defectuosos' },
-      ];
-
-      // Función para renderizar la tabla de baja de productos
-      function renderTable() {
-        const tbody = document.querySelector('#productDropTable tbody');
-        tbody.innerHTML = '';
-        productDrops.forEach((drop) => {
-          const row = `
-            <tr>
-              <td>${drop.product}</td>
-              <td>${drop.dropDate}</td>
-              <td>${drop.dropQuantity}</td>
-              <td>${drop.observations}</td>
-              <td class="actions-btn">
-                <button class="btn btn-danger btn-sm delete-btn"><i class="fa fa-trash"></i></button>
-              </td>
-            </tr>
-          `;
-          tbody.innerHTML += row;
-        });
-      }
-
-      // Inicializa la tabla con datos iniciales
-      renderTable();
-    </script>
+    <script src="controllers/bajaProducto.js"></script>
+    
   </body>
 </html>

@@ -6,7 +6,7 @@
  */
 
  
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -70,7 +70,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6{
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -5398,8 +5398,6 @@ button.bg-danger:hover,
 button.bg-danger:focus {
   background-color: #bd2130 !important; }
 
-.bg-light {
-  background-color: #f8f9fa !important; }
 
 a.bg-light:hover, a.bg-light:focus,
 button.bg-light:hover,
@@ -8182,7 +8180,7 @@ h1, h2, h3, h4, h5,
   margin-top: 60px;
   min-width: 300px;
   max-width: 300px;
-  background: pink;  /*Aqui cambie el background*/
+  background: #EBE5DD;
   color: #fff;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -8333,8 +8331,8 @@ h1, h2, h3, h4, h5,
     background: #000;
     opacity: .3; }
   .bg-wrap .user-logo .img {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 10px; }
@@ -8730,23 +8728,6 @@ form.form_contact input[type="button"]:hover{
     overflow: hidden;
   }
   
-  .header {
-    height: 50px;
-    width: 420px;
-    background: rgba(66, 66, 66, 1);
-    text-align: center;
-    position:relative;
-    z-index: 100;
-  }
-  
-  .header h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    line-height: 50px;
-    font-weight: 100;
-    letter-spacing: 1px;
-  }
   
   .left, .right {
     position: absolute;
@@ -9144,7 +9125,7 @@ h3{
 	font-size:3rem;
 	letter-spacing:-1.5px;
 	margin-top:5px;
-	margin-left:35px;
+	margin-left:0px;
   text-align: center;
 }
 
@@ -9296,7 +9277,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	.footer {
 		z-index: 1;
-		--footer-background:pink;
+		--footer-background: #b8aea3;
 		display:flex;
 		position: absolute;
 		grid-area: footer;
@@ -9329,12 +9310,12 @@ body {
 			padding:2rem;
 			background:var(--footer-background);
 			a, p {
-				color:black;
+				color:white;
 				text-decoration:none;
-        font-size: 20px;
+        font-size: 13px;
 			}
 			b {
-				color:black;
+				color:white;
 			}
 			p {
 				margin:0;
@@ -9395,20 +9376,15 @@ body {
 }
 
 
-
-
-/* Estilo header */
-
 /* Header (Navbar) */
 .header {
   width: 100%;
-  height: auto;
   margin-top: 0px;
   background-color: #EBE5DD;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar1   {
+.navbar {
   padding: 0.8rem 1rem;
   background-color: #EBE5DD;
 }
@@ -9457,5 +9433,77 @@ body {
   vertical-align: middle;
   line-height: 1px;
   font-size: 30px;
-  border:none;
+  border: none ;
+}
+
+/* Additional styles for table and buttons */
+.table-container {
+  margin-top: 20px;
+}
+
+.table {
+  border-radius: 10px; /* Adjust this value for the desired roundness */
+  overflow: hidden; /* Ensures the border-radius affects the content */
+}
+
+.actions-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.actions-btn button {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  border-radius: 10px; /* Adjust this value for the desired roundness */
+  overflow: hidden; /* Ensures the border-radius affects the content */
+  margin-top: 99px;
+}
+
+.img.bg-wrap {
+  border-radius: 10px 10px 0 0; /* Round the top corners of the sidebar */
+}
+
+.buttonModal img {
+  width: 40px;
+}
+
+.buttonModal {
+  background-color: transparent;
+  border: none;
+}
+
+#searchInput {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  padding: 10px; /* Espaciado interno */
+  margin-top: 10px; /* Espaciado superior */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: all 0.3s ease; /* Transición suave para cambios */
+}
+
+#searchInput:focus {
+  border-color: #007bff; /* Color de borde cuando está enfocado */
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2); /* Sombra azul más intensa */
+  outline: none; /* Eliminar el borde de enfoque predeterminado */
+}
+
+
+.table-container {
+  margin-top: 20px;
+}
+
+.actions-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.actions-btn button {
+  padding: 5px 10px;
+  font-size: 14px;
 }
