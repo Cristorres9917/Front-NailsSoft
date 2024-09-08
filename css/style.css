@@ -5,8 +5,10 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+ @import url("https://fonts.googleapis.com/css2?family=Sevillana&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600&family=Dancing+Script:wght@400..700&family=Fredoka:wdth,wght@90.8,300..700&family=Questrial&family=Sarabun:wght@500;600&family=Satisfy&display=swap");
  
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -70,7 +72,7 @@ hr {
   height: 0;
   overflow: visible; }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem; }
 
@@ -8182,6 +8184,7 @@ h1, h2, h3, h4, h5,
   max-width: 300px;
   background: #EBE5DD;
   color: #fff;
+  box-shadow: 10px 4px 5px -4px rgba(0,0,0,0.18);
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -9129,18 +9132,6 @@ h3{
   text-align: center;
 }
 
-.h31 {
-
-  font-family: 'Sevillana', cursive;
-  font-style: italic;
-	font-size:3rem;
-	letter-spacing:-1.5px;
-	margin-top:50px;
-	margin-left:0px;
-  text-align: center;
-  
-}
-
 #fps
 {
 	margin-top:5px;
@@ -9393,7 +9384,7 @@ body {
   width: 100%;
   margin-top: 0px;
   background-color: #EBE5DD;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 10px 5px -4px rgba(0,0,0,0.18);
 }
 
 .navbar {
@@ -9409,6 +9400,7 @@ body {
 
 .brand-name {
   font-size: 1.5rem;
+  font-family: 'Sevillana', cursive;
   font-weight: bold;
   margin-left: 65px;
   color: black;
@@ -9505,17 +9497,17 @@ body {
   outline: none; /* Eliminar el borde de enfoque predeterminado */
 }
 
+    .table-container {
+      margin-top: 20px;
+    }
+    
+    .actions-btn {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .actions-btn button {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
 
-.table-container {
-  margin-top: 20px;
-}
-
-.actions-btn {
-  display: flex;
-  gap: 10px;
-}
-
-.actions-btn button {
-  padding: 5px 10px;
-  font-size: 14px;
-}
