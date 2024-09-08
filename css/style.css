@@ -9129,6 +9129,18 @@ h3{
   text-align: center;
 }
 
+.h31 {
+
+  font-family: 'Sevillana', cursive;
+  font-style: italic;
+	font-size:3rem;
+	letter-spacing:-1.5px;
+	margin-top:50px;
+	margin-left:0px;
+  text-align: center;
+  
+}
+
 #fps
 {
 	margin-top:5px;
